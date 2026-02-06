@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Platform | GPSUSA.ai</title>
+  <meta name="description" content="GPSUSA.ai — AI Infrastructure & Compute Governance">
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="container">
+      <div class="row">
+        <a class="brand" href="index.html" aria-label="GPSUSA.ai home">
+          <div class="logo" aria-hidden="true"></div>
+          <span>GPSUSA.ai</span>
+        </a>
+
+        <nav class="navlinks" aria-label="Primary">
+          <a href="index.html" class="">Home</a>
+<a href="solutions.html" class="">Solutions</a>
+<a href="platform.html" class="active">Platform</a>
+<a href="team.html" class="">Team</a>
+<a href="contact.html" class="">Contact</a>
+        </nav>
+
+        <div class="cta">
+          <a class="btn" href="contact.html">Talk to us</a>
+          <a class="btn primary" href="contact.html#request">Request an assessment</a>
+          <button class="btn mobile-toggle" data-mobile-toggle aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="mobile-menu" data-mobile-menu aria-label="Mobile">
+        <a href="index.html" class="">Home</a>
+<a href="solutions.html" class="">Solutions</a>
+<a href="platform.html" class="active">Platform</a>
+<a href="team.html" class="">Team</a>
+<a href="contact.html" class="">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+<section class="section" style="padding-top:54px">
+  <div class="container">
+    <div class="badge"><span class="dot"></span> Platform</div>
+    <h1 class="h1" style="margin-top:14px">The governance layer above your schedulers</h1>
+    <p class="sub">
+      GPSUSA.ai’s approach is to decouple governance from infrastructure so economics and policy remain stable even when
+      hardware, clouds, or model stacks change.
+    </p>
+
+    <div class="split" style="margin-top:20px">
+      <div class="block">
+        <div class="smallcaps">Control plane</div>
+        <h3 style="margin-top:10px">GPU Economic Control Planes</h3>
+        <ul class="list">
+          <li><b>Quotas & budgets:</b> enforce spend constraints at runtime per tenant and per workload class.</li>
+          <li><b>Fairness:</b> GPU-seconds fairness and priority tiers—prevent starvation and noisy-neighbor collapse.</li>
+          <li><b>Isolation:</b> placement and policy guards to protect p99 latency SLOs in multi-tenant clusters.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <div class="smallcaps">Economics</div>
+        <h3 style="margin-top:10px">True Unit Economics Enforcement</h3>
+        <ul class="list">
+          <li><b>Tokens/sec/$</b> as the north star KPI.</li>
+          <li>Full lifecycle cost models (compute + memory + orchestration + reliability overhead).</li>
+          <li>Visibility into KV-cache churn, decode stalls, and scheduler pathologies with direct policy hooks.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section" style="padding-left:0; padding-right:0">
+      <h2>Interactive reference architecture</h2>
+      <p class="lead">Click any box to see what that layer means in business terms (cost, risk, and enforceable constraints).</p>
+
+      <div class="arch">
+        <svg viewBox="0 0 980 360" role="img" aria-label="GPSUSA.ai reference architecture">
+          <line class="edge" x1="160" y1="95" x2="340" y2="95"/>
+          <line class="edge" x1="470" y1="95" x2="650" y2="95"/>
+          <line class="edge" x1="780" y1="95" x2="820" y2="180"/>
+          <line class="edge" x1="820" y1="180" x2="650" y2="265"/>
+          <line class="edge" x1="470" y1="265" x2="340" y2="265"/>
+          <line class="edge" x1="160" y1="265" x2="90" y2="180"/>
+          <line class="edge" x1="90" y1="180" x2="160" y2="95"/>
+
+          <g class="node" tabindex="0" data-arch-node="workloads">
+            <rect x="40" y="60" rx="18" ry="18" width="240" height="110"></rect>
+            <text x="70" y="105">Workloads</text>
+            <text class="subt" x="70" y="132">Agents • RAG • Training</text>
+          </g>
+
+          <g class="node" tabindex="0" data-arch-node="runtime">
+            <rect x="300" y="60" rx="18" ry="18" width="240" height="110"></rect>
+            <text x="330" y="105">Runtime</text>
+            <text class="subt" x="330" y="132">vLLM-class serving</text>
+          </g>
+
+          <g class="node" tabindex="0" data-arch-node="scheduler">
+            <rect x="560" y="60" rx="18" ry="18" width="240" height="110"></rect>
+            <text x="590" y="105">Scheduler</text>
+            <text class="subt" x="590" y="132">Placement • Queues • SLOs</text>
+          </g>
+
+          <g class="node" tabindex="0" data-arch-node="governance">
+            <rect x="560" y="205" rx="18" ry="18" width="240" height="110"></rect>
+            <text x="590" y="250">Governance</text>
+            <text class="subt" x="590" y="277">Quotas • Fairness • Isolation</text>
+          </g>
+
+          <g class="node" tabindex="0" data-arch-node="economics">
+            <rect x="300" y="205" rx="18" ry="18" width="240" height="110"></rect>
+            <text x="330" y="250">Economics</text>
+            <text class="subt" x="330" y="277">Tokens/sec/$ • Cost/Token</text>
+          </g>
+
+          <g class="node" tabindex="0" data-arch-node="economics">
+            <rect x="40" y="205" rx="18" ry="18" width="240" height="110"></rect>
+            <text x="70" y="250">Observability</text>
+            <text class="subt" x="70" y="277">Leakage • p99 • Attribution</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="panel" style="margin-top:14px">
+        <div class="inner">
+          <div class="mini-title">Cloud-agnostic posture</div>
+          <h3 style="margin:10px 0 8px">Control survives vendor changes.</h3>
+          <p class="sub" style="margin:0">
+            We leverage native primitives from AWS, Azure, GCP, and on-prem, but keep the governance logic portable—so your economics
+            remain stable even as your infrastructure evolves.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn primary" href="contact.html#request">Request an architecture review</a>
+      <a class="btn" href="solutions.html">Back to solutions</a>
+    </div>
+  </div>
+</section>
+
+<div class="modal" data-arch-modal aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-label="Architecture details">
+    <div class="modal-head">
+      <div>
+        <div class="modal-title" data-arch-title>Title</div>
+        <div class="modal-desc" data-arch-desc>Description</div>
+      </div>
+      <button class="btn modal-close" data-arch-close>Close</button>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="brand" style="gap:10px">
+            <div class="logo" style="width:30px;height:30px;border-radius:11px"></div>
+            <div>
+              <div style="font-weight:900;color:var(--text);">GPSUSA.ai</div>
+              <div style="margin-top:4px">AI Infrastructure • Compute Governance • Unit Economics</div>
+            </div>
+          </div>
+          <div style="margin-top:10px; max-width:72ch">
+            Architecting the control planes that transform AI from a research expense into a predictable business utility.
+          </div>
+        </div>
+        <div style="min-width:240px">
+          <div class="smallcaps">Headquarters</div>
+          <div style="margin-top:10px">
+            5669 Snell Avenue,<br>San Jose, CA 95123
+          </div>
+          <div style="margin-top:10px; display:flex; gap:10px; flex-wrap:wrap">
+            <button class="btn" data-copy="info@gpscorpusa.com" style="padding:9px 12px">Copy email</button>
+            <a class="btn" href="mailto:info@gpscorpusa.com" style="padding:9px 12px">Email</a>
+            <a class="btn" href="tel:+14089073906" style="padding:9px 12px">Call</a>
+          </div>
+        </div>
+        <div style="min-width:220px">
+          <div class="smallcaps">Navigate</div>
+          <div style="margin-top:10px; display:grid; gap:8px">
+            <a href="solutions.html">Solutions</a>
+            <a href="platform.html">Platform</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px; display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap">
+        <div>© 2026 GPSUSA.ai. All rights reserved.</div>
+        <div style="display:flex; gap:12px">
+          <a href="contact.html#legal">Legal</a>
+          <a href="contact.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
